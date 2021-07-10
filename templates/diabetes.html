@@ -32,7 +32,7 @@
              <div class="right">
                 
               <h1>Diabetes Prediction</h1>
-              <form action="http://localhost:5000/predict" method="post">
+              <form action="{{ url_for('predict')}}" method="post">
   
                   <!-- TODO : Year to accept only year date picker -->
                   <div class="input-fields">
