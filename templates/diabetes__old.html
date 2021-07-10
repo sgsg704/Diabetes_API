@@ -1,0 +1,81 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="../static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+        <img src="{{url_for('static', filename="logo.jpeg")}}" alt="healthify logo" class="photo">
+        <div class = "logo"><h1>Healthify</h1></div>
+        <div class = "menu">
+        <a href="#">Home</a>
+    
+        <a href="#">Diabetes Prediction</a>
+        <a href="#">Breast Cancer Prediction</a>
+        <a href="#">Kidney Disease</a>
+        <a href="#">Liver Disease</a>
+        <a href="#">Heart Disease</a>
+
+    
+      
+        </div>
+    </nav>
+    <section>
+    
+    <div class="container">
+
+               <div class="left"></div>
+               <div class="right">
+                  
+                <h1>Diabetes Prediction</h1>
+                <div class="col-lg-6 col-md-6 col-12">
+                  <form action="http://localhost:5000/predict" method="post">
+                    <div class="form-group">
+                      <!-- TODO : Year to accept only year date picker -->
+                      <label for="Pregnancies">No. of Pregnencies</label>
+                      <input class="form-control" type="number" id="Pregnancies" name="Pregnancies" required="required" placeholder="No. of Pregnencies">
+                    </div>
+                    <div class="form-group">
+                      <label for="Glucose">Glucose Level</label>
+                      <input class="form-control" type="number" step="any" id="Glucose" name="Present_Price" required="required" placeholder="Glucose Level">
+                    </div>
+                    <div class="form-group">
+                      <label for="BloodPressure">Current Blood Pressure</label>
+                      <input class="form-control" type="number" id="BloodPressure" name="BloodPressure" required="required" placeholder="Current Blood Pressure">
+                    </div>
+                    <div class="form-group">
+                      <label for="BMI">Enter the Body Mass Index</label>
+                      <input class="form-control" type="number" id="BMI" name="BMI" required="required" placeholder="Body Mass Index">
+                    </div>
+                    <div class="form-group">
+                      <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function</label>
+                      <input class="form-control" type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required="required" placeholder="Diabetes Pedigree Function">
+                    </div>
+                    <div class="form-group">
+                      <label for="Age">Age</label>
+                      <input class="form-control" type="number" id="Age" name="Age" required="required" placeholder="Age">
+                    </div>
+                    
+                    
+                    
+                    <button type="submit" class="btn btn-danger">Predict</button>
+                  </form>
+                
+                   </div>
+             
+    
+    </div>
+</section>
+</body>
+</html>

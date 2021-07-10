@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css"  href="{{url_for('static', filename="style.css")}}">
+  <title>Diabetes</title>
+</head>
+<body>
+  <nav>
+    <img src="{{url_for('static', filename="logo.jpeg")}}" alt="healthify logo" class="photo">
+    <div class = "logo"><h1>Healthify</h1></div>
+    <div class = "menu">
+    <a href="#">Home</a>
+
+    <a href="#">Diabetes Prediction</a>
+    <a href="#">Breast Cancer Prediction</a>
+    <a href="#">Kidney Disease</a>
+    <a href="#">Liver Disease</a>
+    <a href="#">Heart Disease</a>
+
+
+  
+    </div>
+</nav>
+<section>
+    
+  <div class="container">
+
+             <div class="left"></div>
+             <div class="right">
+                
+              <h1>Diabetes Prediction</h1>
+              <form action="http://localhost:5000/predict" method="post">
+  
+                  <!-- TODO : Year to accept only year date picker -->
+                  <div class="input-fields">
+                  <input class="inputt" type="number" id="Pregnancies" name="Pregnancies" required="required" placeholder="No. of Pregnencies">
+            
+               
+                  <input class="inputt" type="number" step="any" id="Glucose" name="Present_Price" required="required" placeholder="Glucose Level">
+               
+                  <input class="inputt" type="number" id="BloodPressure" name="BloodPressure" required="required" placeholder="Current Blood Pressure">
+              
+                  <input class="inputt" type="number" id="BMI" name="BMI" required="required" placeholder="Body Mass Index">
+              
+            
+                  <input class="inputt" type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required="required" placeholder="Diabetes Pedigree Function">
+             
+                  <input class="inputt" type="number" id="Age" name="Age" required="required" placeholder="Age">
+               
+                
+                </div>
+                
+                <button type="submit" class="submit">Predict</button>
+              </form>
+               
+              
+                 </div>
+           
+  
+  </div>
+</section>
+</body>
+</html>
